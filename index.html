@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="astronaut" src="models/astronaut/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="moon" src="models/moon/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="flag" src="models/flag/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="surface" src="models/surface/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="lan" src="models/lan/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="curiosity" src="models/curiosity/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="earth" src="models/earth/scene.gltf">
+        </a-asset-item>
+        <a-asset-item id="stars" src="models/stars/scene.gltf">
+        </a-asset-item>
+      </a-assets>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse">
+      </a-entity>
+      <a-entity gltf-model="#astronaut" position="0.3 0.15 0.8" scale="0.18 0.18 0.18" rotation="5 -17 0" animation-mixer="clip:wave">
+      </a-entity>
+      <a-entity gltf-model="#flag" position="-0.1 0 0.9" scale="0.0008 0.0008 0.0008" rotation="0 -40 2" animation-mixer>
+      </a-entity>
+      <a-entity gltf-model="#lan" position="-.9 .7 -.5" scale="0.1 0.1 0.1" rotation="0 10 0">
+      </a-entity>
+      <a-entity gltf-model="#curiosity" position="-.9 0 .5" scale=".15 .15 .15" rotation="0 90 0" rotation="0 0 0" animation-mixer="clip:Take 01">
+      </a-entity>
+      <a-entity gltf-model="#surface" position="0 0 0" scale="3 3 3" rotation="0 0 0">
+      </a-entity>
+      <a-entity gltf-model="#earth" position="20 15 -30" scale="0.3 0.3 0.3" animation="property: rotation; to: 0 0 -360; loop: true; dur: 20000; easing: linear">
+      </a-entity>
+      <a-entity gltf-model="#stars" position="0 0 0" scale=".1 .1 .1" animation="property: rotation; to: 360 360 0; loop: true; dur: 400000; easing: linear">
+      </a-entity>
+      <a-entity light="type: directional; color: #EEE; intensity: 2" position="0 1 1">
+      </a-entity>
+      <a-entity position="-0.1 -1.25 1.5" rotation="0 0 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <a-sky color="#000"></a-sky>
+    </a-scene>
+  </body>
+</html>
